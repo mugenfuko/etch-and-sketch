@@ -1,0 +1,26 @@
+#container {
+    height: 100%;
+    width: 100%;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gridSquare {
+    height: 50px;
+    width: 50px;
+    /*flex-grow: 1;
+    flex-basis: 4%;*/
+    border-style: solid;
+    background-color: tomato;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
