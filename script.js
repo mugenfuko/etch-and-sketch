@@ -1,23 +1,34 @@
 // Div for grid
 const container = document.querySelector('#container')
-const grid = document.querySelector('.grid');
+const grid = document.createElement('div');
+i = 0;
 
-function addBreak() {
-    const br = document.createElement('div');
-    br.classList.add('break');
-    grid.appendChild(br);
+function makeGrid() {
+    grid.classList.add('grid');
+    container.appendChild(grid);
 }
+
 function addGridRow() {
-    for (i = 0; i < 16; i++) {
+    const gridRow = document.createElement('div');
+    grid.appendChild(gridRow);
+    for (x = 0; x < i; x++) {
         const gridSquare = document.createElement('div');
+        gridRow.classList.add('gridRow');
         gridSquare.classList.add('gridSquare');
-        gridSquare.textContent = i;
-        grid.appendChild(gridSquare);
+        //gridSquare.textContent = i;
+        gridRow.appendChild(gridSquare);
     }
 }
 
-for (x = 0; x < 16; x++) {
-    addGridRow();
-    addBreak();
+function fillGrid() {
+    i = prompt('big chungus');
+    if (i <= 64) {
+        grid.innerHTML = '';
+        makeGrid();
+        for (y = 0; y < i; y++) {
+            addGridRow();
+        }
+    }   else {
+        alert('Not so high!');
+    }
 }
-

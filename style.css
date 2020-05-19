@@ -1,26 +1,28 @@
 #container {
     height: 100%;
     width: 100%;
-    /*display: flex;
-    flex-direction: column;*/
+    display: flex;
 }
 
 .grid {
+    height: 960px;
+    width: 960px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .gridSquare {
-    height: 50px;
-    width: 50px;
-    /*flex-grow: 1;
-    flex-basis: 4%;*/
+    height: fit-content;
+    flex-grow: 1;
+    flex-basis: 0;
     border-style: solid;
-    background-color: tomato;
+    border-width: 1px;
+    background-color: orangered;
 }
 
-.break {
-    flex-basis: 100%;
-    height: 0;
+.gridRow {
+    height: 100px;
+    flex-shrink: 1;
+    display: flex;
+    display: row;
 }
