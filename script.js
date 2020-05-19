@@ -15,22 +15,27 @@ function addGridRow() {
         const gridSquare = document.createElement('div');
         gridRow.classList.add('gridRow');
         gridSquare.classList.add('gridSquare');
+        gridSquare.addEventListener('mouseenter', colorGrid);
         //gridSquare.textContent = i;
         gridRow.appendChild(gridSquare);
     }
 }
 
 function fillGrid() {
-    i = prompt('big chungus');
-    if (i > 0 && i <= 64) {
-        grid.innerHTML = '';
+    grid.innerHTML = '';
+    i = prompt('Select grid size!');
+    if (i > 0 && i <= 64) {        
         makeGrid();
         for (y = 0; y < i; y++) {
             addGridRow();
         }
-    }   else if (i == 0) {
+    }   else if (i <= 0) {
         alert('Not so low!');
     }   else {
         alert('Not so high!');
     }
+}
+
+function colorGrid() {
+    this.style.backgroundColor = 'black';
 }
