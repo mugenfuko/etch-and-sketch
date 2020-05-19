@@ -22,12 +22,14 @@ function addGridRow() {
 
 function fillGrid() {
     i = prompt('big chungus');
-    if (i <= 64) {
+    if (i > 0 && i <= 64) {
         grid.innerHTML = '';
         makeGrid();
         for (y = 0; y < i; y++) {
             addGridRow();
         }
+    }   else if (i == 0) {
+        alert('Not so low!');
     }   else {
         alert('Not so high!');
     }
