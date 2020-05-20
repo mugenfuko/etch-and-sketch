@@ -1,12 +1,20 @@
+#button {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
 #container {
     height: 100%;
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .grid {
-    height: 960px;
-    width: 960px;
+    height: 840px;
+    width: 840px;
     display: flex;
     flex-direction: column;
 }
